@@ -1,0 +1,11 @@
+from keras.models import Sequential
+from keras.layers import Dense
+import matplotlib.pyplot as plt
+import numpy
+
+model = load_model('C:/Users/Cohen/Desktop/models/mymodeltwice.h5', custom_objects={"top_5_categorical_accuracy": top_5_categorical_accuracy})
+print(model.metrics_names)
+
+plt.plot(model.history['acc'])
+
+plt.show()
